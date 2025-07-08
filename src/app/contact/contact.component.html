@@ -10,45 +10,99 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <h2 class="contact-form-title">Formulario contacto</h2>
-                    <form class='form-contact'>
+                    <form class='form-contact' (submit)="submitForm()">
                         <div class="input-group">
-                            <label for="fullname" class="input-label">
-                                Nombre Completo:
+                            <label for="nombre" class="input-label">
+                                Nombre:
                             </label>
                             <input  type="text" 
-                                    name="fullname" 
-                                    id="fullname" 
-                                    required 
+                                    name="nombre" 
+                                    id="nombre"  
                                     minLength="4" 
-                                    maxLength="80"
+                                    maxLength="10"
+                                    placeholder='Juan'
+                                    required
+                                    [(ngModel)]="formState.nombre" 
+                                    #nombre="ngModel"/>
+                                @if((nombre.dirty || nombre.touched) && nombre.invalid){
+                                <span class="error-text">El nombre debe tener entre 4 y 10 caracteres</span>
+                                }
+                        </div>
+                        <div class="input-group">
+                            <label for="apellido" class="input-label">
+                                Apellido:
+                            </label>
+                            <input  type="text" 
+                                    name="apellido" 
+                                    id="apellido" 
+                                    minLength="4" 
+                                    maxLength="15"
                                     autoFocus="" 
-                                    placeholder='Juan Doe' />
+                                    placeholder='Perez'
+                                    required 
+                                    [(ngModel)]="formState.apellido" 
+                                    #apellido="ngModel"/>
+                                @if((apellido.dirty || apellido.touched) && nombre.invalid){
+                                <span class="error-text">El apellido debe tener entre 4 y 15 caracteres</span>
+                                }
                         </div>
                         <div class="input-group">
                             <label for="mail" class="input-label">
                                 Mail:
                             </label>
                             <input  type="email" 
-                                    name="mail" 
-                                    id="mail" 
+                                    name="email" 
+                                    id="email"
                                     required 
-                                    minLength="10" 
-                                    maxLength="100"
+                                    minLength="6" 
+                                    maxLength="12"
                                     placeholder="ejemplo@correo.com"
-                                    pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" />
+                                    pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" 
+                                    [(ngModel)]="formState.email" 
+                                    #email="ngModel"/>
+                                @if((email.dirty || email.touched) && email.invalid){
+                                <p class="error-text">El Mail debe tener entre 6 y 12 caracteres o el Mail tiene un formato
+                                    NO válido</p>
+                                }
+                        </div>
+                        <div class="input-group">
+                            <label for="asunto" class="input-label">
+                                Asunto:
+                            </label>
+                            <input  type="text" 
+                                    name="asunto" 
+                                    id="asunto" 
+                                    required 
+                                    minLength="4" 
+                                    maxLength="15"
+                                    autoFocus="" 
+                                    placeholder='Consulta' 
+                                    [(ngModel)]="formState.asunto" 
+                                    #asunto="ngModel"/>
+                                @if((asunto.dirty || asunto.touched) && asunto.invalid){
+                                <span class="error-text">El asunto debe tener entre 4 y 15 caracteres</span>
+                                }
                         </div>
                         <div class="input-group">
                             <label for="comentario" class="input-label">
-                                Deja tu comentario:
+                                Deja tu mensaje:
                             </label>
                             <textarea  name="comentario" 
                                         id="comentario" 
                                         placeholder="Escriba su comentario aquí"
-                                        maxLength="150">
+                                        minlength="6"
+                                        maxLength="150"
+                                        [(ngModel)]="formState.comentario" 
+                                        #comentario="ngModel"
+                                        required>
                             </textarea>
+                                @if((comentario.dirty || comentario.touched) && comentario.invalid){
+                                <span class="error-text">El comentario debe tener mínimo 6 caracteres</span>
+                                }
                         </div>
                         <div class="input-group-boton">
                             <button type="submit">Enviar</button>
+                            <button type="reset">Borrar</button>
                         </div>
                     </form>
                 </div>
