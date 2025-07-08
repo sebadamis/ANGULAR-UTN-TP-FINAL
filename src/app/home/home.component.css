@@ -1,0 +1,24 @@
+.home {
+    min-height: 100dvh;
+    min-width: 100dvw;
+    background: linear-gradient(90deg, #003f5b, #2b4b7d, #5f5195, #98509d, #cc4c91, #f25375, #ff6f4e, #ff9913);
+}
+
+h1 {
+    display: flexbox;
+    text-align: center;
+}
+
+.carousel-container {
+    display: flex;
+    width: 900px;
+    height: 350px;
+    margin: 0.15rem auto;
+}
+
+.products {
+    display: flex;
+    height: 60%;
+    min-width: 100%;
+    margin: 0.15rem auto;
+}

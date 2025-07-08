@@ -1,0 +1,122 @@
+*{
+    margin:0;
+font-family: Poppins, sans-serif;
+box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(19, 172, 146);
+    overflow: hidden;
+}
+
+.container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+}
+.wrapper{
+    width:100%;
+    background: white;
+    border-radius: 15px;
+    padding:0 0 5px;
+}
+
+.wrapper .login{
+    background-color: rgb(12, 88, 76);
+    margin-bottom: 30px;
+    color: white;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.wrapper form{
+    padding: 20px;
+}
+
+.wrapper form .data{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.wrapper .data input{
+    width: 95%;
+    padding-left: 60px;
+    height: 40px;
+}
+
+.wrapper .data i{
+    background-color: rgb(12, 88, 76);
+    width:47px;
+    height: 100%;
+    position: absolute;
+    border:1px solid rgb(12, 88, 76);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.wrapper form .pass{
+    margin: -10px 0 15px 0;
+}
+.wrapper form .pass a{
+color: rgb(12, 88, 76);
+text-decoration: none;
+font-size: 12px;
+}
+
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+}
+
+.wrapper form .button input{
+    padding-left: 0px;
+    background-color: rgb(12, 88, 76);
+    border: 1px solid rgb(12, 88, 76);
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.wrapper form .button input:hover{
+    background-color: rgb(20, 172, 65);
+    color:black
+}
+
+.wrapper form .signup{
+    margin: -10px 0 15px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    
+}
+.wrapper form .signup a{
+color: rgb(12, 88, 76);
+text-decoration: none;
+font-size: 14px;
+margin-left: 5px;
+font-weight: 400;
+}
+
+.wrapper form .signup a:hover{
+    text-decoration: underline;
+}
+
+.error-text {
+    display: flex;
+    flex-wrap: wrap;
+    color: crimson;
+    background-color: yellow;
+    font-weight: 800;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.2rem;
+}
