@@ -22,21 +22,21 @@ export class Contact {
   contact : Contacto[] = []
 
   submitForm(){
-    console.log(this.formState)
+    console.log(this.estadoFormulario)
     this.contact.push({
-      nombre: this.formState.nombre,
-      apellido: this.formState.apellido,
-      email: this.formState.email,
-      asunto: this.formState.asunto,
-      comentario: this.formState.comentario
+      nombre: this.estadoFormulario.nombre,
+      apellido: this.estadoFormulario.apellido,
+      email: this.estadoFormulario.email,
+      asunto: this.estadoFormulario.asunto,
+      comentario: this.estadoFormulario.comentario
     })
-    this.formState.nombre = "",
-    this.formState.apellido = "",
-    this.formState.email = "",
-    this.formState.asunto = "",
-    this.formState.comentario = ""
+    this.estadoFormulario.nombre = "",
+    this.estadoFormulario.apellido = "",
+    this.estadoFormulario.email = "",
+    this.estadoFormulario.asunto = "",
+    this.estadoFormulario.comentario = ""
   }
-  formState = {
+  estadoFormulario = {
     nombre: "",
     apellido: "",
     email: "",
