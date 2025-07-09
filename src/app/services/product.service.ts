@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 export interface Product{
   id: number,
@@ -18,11 +18,16 @@ export interface Product{
   providedIn: 'root'
 })
 export class ProductService {
-  // https://fakestoreapi.com/products
   private API_URL = "./product.json"
   constructor(private http: HttpClient) { }
   getProducts () : Observable<Product[]>{
     return this.http.get<Product[]>(this.API_URL)
+  }
+
+  getProductById(product_id : number): Observable<Product | undefined>{
+    return this.http.get<Product[]>(this.API_URL).pipe(
+      map(products => products.find(products => products.id === product_id))
+    )
   }
 }
 
