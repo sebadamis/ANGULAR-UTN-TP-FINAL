@@ -37,7 +37,6 @@
     }
 
     .contact-form {
-        /* background-color: transparent; */
         background: #020024;
         background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
         padding: 0;
@@ -47,7 +46,7 @@
             text-align: center;
             margin: auto;
         }
-        /* .form-contact {
+        .form-contact {
             color: white;
             background-color: transparent;
             padding: 1rem;
@@ -58,7 +57,7 @@
             flex-shrink: 2;
             width: 100%;
             height: auto;
-            border-radius: 15%; */
+            border-radius: 15%;
             
             .input-group {
                 display: flex;
@@ -77,8 +76,10 @@
                     margin: 1rem;
                     text-align: left;
                 }
+
+
         
-                input, textarea, select {
+                input, textarea {
                     padding: 0.5rem;
                     color: #222;
                     outline: none;
@@ -114,7 +115,7 @@
                     
                 }
             }
-        /* } */
+        }
     }
 
 }
