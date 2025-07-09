@@ -5,6 +5,7 @@
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
     background-repeat: no-repeat;
     padding-top: 4rem;
+    padding-bottom: 1rem;
 }
 
 .main-container {
@@ -36,7 +37,9 @@
     }
 
     .contact-form {
-        background-color: transparent;
+        /* background-color: transparent; */
+        background: #020024;
+        background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
         padding: 0;
         color: white;
 
@@ -44,7 +47,7 @@
             text-align: center;
             margin: auto;
         }
-        .form-contact {
+        /* .form-contact {
             color: white;
             background-color: transparent;
             padding: 1rem;
@@ -55,7 +58,7 @@
             flex-shrink: 2;
             width: 100%;
             height: auto;
-            border-radius: 15%;
+            border-radius: 15%; */
             
             .input-group {
                 display: flex;
@@ -91,10 +94,10 @@
             display: flex;
             margin: 1rem auto;
             justify-content: center;
-            width: 70%;
+            width: 80%;
             height: auto;
                 
-                button {
+                input {
                         flex-direction: row;
                         flex-wrap: wrap;
                         display: flexbox;
@@ -105,13 +108,13 @@
                         color: white;
                         outline: none;
                         border: none;
-                        width: 8rem;
+                        width: 9rem;
                         
         
                     
                 }
             }
-        }
+        /* } */
     }
 
 }

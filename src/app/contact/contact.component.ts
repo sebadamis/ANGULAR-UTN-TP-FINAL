@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
-interface Contacto {
+interface ContactPage {
   nombre: string,
   apellido: string,
   email: string,
@@ -19,24 +19,24 @@ interface Contacto {
 
 
 export class Contact {
-  contact : Contacto[] = []
+  contacto : ContactPage[] = []
 
-  submitForm(){
-    console.log(this.estadoFormulario)
-    this.contact.push({
-      nombre: this.estadoFormulario.nombre,
-      apellido: this.estadoFormulario.apellido,
-      email: this.estadoFormulario.email,
-      asunto: this.estadoFormulario.asunto,
-      comentario: this.estadoFormulario.comentario
+  submitFormContact(){
+    console.log(this.estado_Formulario)
+    this.contacto.push({
+      nombre: this.estado_Formulario.nombre,
+      apellido: this.estado_Formulario.apellido,
+      email: this.estado_Formulario.email,
+      asunto: this.estado_Formulario.asunto,
+      comentario: this.estado_Formulario.comentario
     })
-    this.estadoFormulario.nombre = "",
-    this.estadoFormulario.apellido = "",
-    this.estadoFormulario.email = "",
-    this.estadoFormulario.asunto = "",
-    this.estadoFormulario.comentario = ""
+    this.estado_Formulario.nombre = "",
+    this.estado_Formulario.apellido = "",
+    this.estado_Formulario.email = "",
+    this.estado_Formulario.asunto = "",
+    this.estado_Formulario.comentario = ""
   }
-  estadoFormulario = {
+  estado_Formulario = {
     nombre: "",
     apellido: "",
     email: "",

@@ -20,7 +20,7 @@ interface Usuario {
 export class Register {
   usuarios : Usuario[] = []
 
-  submitForm(){
+  submitFormRegister(){
     console.log(this.formState)
     this.usuarios.push({
       nombre: this.formState.nombre,

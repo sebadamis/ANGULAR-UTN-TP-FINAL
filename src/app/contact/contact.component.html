@@ -10,46 +10,40 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <h2 class="contact-form-title">Formulario contacto</h2>
-                    <form class='form-contact' (submit)="submitForm()">
+                    <!-- class='form-contact' -->
+                    <form (submit)="submitFormContact()">
                         <div class="input-group">
-                            <label for="nombre" class="input-label">
-                                Nombre:
-                            </label>
+                            <span class="input-label">Nombre:</span>
                             <input  type="text" 
                                     name="nombre" 
                                     id="nombre"  
-                                    minLength="4" 
+                                    minLength="3" 
                                     maxLength="10"
-                                    autofocus
                                     placeholder='Juan'
-                                    [(ngModel)]="estadoFormulario.nombre" 
+                                    [(ngModel)]="estado_Formulario.nombre" 
                                     #nombre="ngModel"
-                                    required/>
+                                    required>
                             @if((nombre.dirty || nombre.touched) && nombre.invalid){
-                            <span class="error-text">El nombre debe tener entre 4 y 10 caracteres</span>
+                            <p class="error-text">El nombre debe tener entre 3 y 10 caracteres</p>
                             }
                         </div>
                         <div class="input-group">
-                            <label for="apellido" class="input-label">
-                                Apellido:
-                            </label>
+                            <span class="input-label">Apellido:</span>
                             <input  type="text" 
                                     name="apellido" 
                                     id="apellido" 
                                     minLength="4" 
                                     maxLength="15"
                                     placeholder='Perez'
-                                    [(ngModel)]="estadoFormulario.apellido" 
+                                    [(ngModel)]="estado_Formulario.apellido" 
                                     #apellido="ngModel"
-                                    required/>
-                            @if((apellido.dirty || apellido.touched) && nombre.invalid){
-                            <span class="error-text">El apellido debe tener entre 4 y 15 caracteres</span>
+                                    required>
+                            @if((apellido.dirty || apellido.touched) && apellido.invalid){
+                            <p class="error-text">El apellido debe tener entre 4 y 15 caracteres</p>
                             }
                         </div>
                         <div class="input-group">
-                            <label for="email" class="input-label">
-                                Mail:
-                            </label>
+                            <span class="input-label">Mail:</span>
                             <input  type="email" 
                                     name="email" 
                                     id="email" 
@@ -57,52 +51,51 @@
                                     maxLength="25"
                                     placeholder="ejemplo@correo.com"
                                     pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" 
-                                    [(ngModel)]="estadoFormulario.email" 
+                                    [(ngModel)]="estado_Formulario.email" 
                                     #email="ngModel"
-                                    required/>
+                                    required>
                             @if((email.dirty || email.touched) && email.invalid){
                             <p class="error-text">El Mail debe tener entre 6 y 25 caracteres o el Mail tiene un formato
                                 NO válido</p>
                             }
                         </div>
                         <div class="input-group">
-                            <label for="asunto" class="input-label">
-                                Asunto:
-                            </label>
+                            <span class="input-label">Asunto:</span>
                             <input  type="text" 
                                     name="asunto" 
                                     id="asunto" 
                                     minLength="4" 
                                     maxLength="15"
-                                    autoFocus="" 
                                     placeholder='Consulta' 
-                                    [(ngModel)]="estadoFormulario.asunto" 
+                                    [(ngModel)]="estado_Formulario.asunto" 
                                     #asunto="ngModel"
-                                    required/>
+                                    required>
                             @if((asunto.dirty || asunto.touched) && asunto.invalid){
-                            <span class="error-text">El asunto debe tener entre 4 y 15 caracteres</span>
+                            <p class="error-text">El asunto debe tener entre 4 y 15 caracteres</p>
                             }
                         </div>
                         <div class="input-group">
-                            <label for="comentario" class="input-label">
-                                Deja tu mensaje:
-                            </label>
+                            <span class="input-label">Deja tu mensaje:</span>
                             <textarea  name="comentario" 
                                         id="comentario" 
                                         placeholder="Escriba su comentario aquí"
                                         minlength="6"
                                         maxLength="150"
-                                        [(ngModel)]="estadoFormulario.comentario" 
+                                        [(ngModel)]="estado_Formulario.comentario" 
                                         #comentario="ngModel"
                                         required>
                             </textarea>
                             @if((comentario.dirty || comentario.touched) && comentario.invalid){
-                            <span class="error-text">El comentario debe tener mínimo 6 caracteres</span>
+                            <p class="error-text">El comentario debe tener mínimo 6 caracteres</p>
                             }
                         </div>
                         <div class="input-group-boton">
-                            <button type="submit">Enviar</button>
-                            <button type="reset">Borrar</button>
+                            @if(nombre.valid && apellido.valid && email.valid && asunto.valid && comentario.valid){
+                            <input type="submit" value="Enviar">
+                            } @else {
+                            <input type="submit" disabled value="Falta completar">
+                            }
+                            <input type="reset" value="Borrar">
                         </div>
                     </form>
                 </div>

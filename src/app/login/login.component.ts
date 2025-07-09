@@ -22,6 +22,7 @@ export class Login {
       email: this.formStado.email,
       password: this.formStado.password
     })
+    this.formStado.email = "",
     this.formStado.password = ""
   }
   formStado = {
