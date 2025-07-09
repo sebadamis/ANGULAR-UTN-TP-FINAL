@@ -1,7 +1,20 @@
-<p>detail works!</p>
 
-@if(producto_seleccionado){
-    <h1>{{producto_seleccionado.titulo}}</h1>
-    <img src="{{producto_seleccionado.img}}" alt="producto_seleccionado.titulo">
-    <p>{{producto_seleccionado.descripcion}}</p>
-}
+<body class="detail-body">
+    <main class="prod-detail-main">
+        @if(loading){
+            <span>Cargando...</span>
+        }
+        @else if(error){
+            <span span style="color: red">Error: {{error}}</span>
+        }
+        @else if (producto_seleccionado){
+            <div class="prod-detail-card">
+                <h1>{{producto_seleccionado.titulo}}</h1>
+                <img src="{{producto_seleccionado.img}}" alt="producto_seleccionado.titulo">
+                <p>{{producto_seleccionado.descripcion}}</p>
+            </div>
+        }
+    </main>
+</body>
+
+

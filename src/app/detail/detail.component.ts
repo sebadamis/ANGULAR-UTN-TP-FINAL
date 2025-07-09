@@ -27,6 +27,7 @@ export class Detail {
           {
             next: (prod_detail) => {
             this.producto_seleccionado = prod_detail;
+            this.loading = false;
             },
             error: (error) => {
               console.error("el observable fallo en ejecucion", error)
