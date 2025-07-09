@@ -92,4 +92,7 @@ html, body {
     .nav-item .nav-link:hover {
         background-color: grey;
     }
+    .navbar-toggler {
+        margin-right: 1rem;
+    }
 }
