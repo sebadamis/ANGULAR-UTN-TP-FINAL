@@ -1,20 +1,122 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
 
 <body class="detail-body">
     <main class="prod-detail-main">
         @if(loading){
-            <span>Cargando...</span>
+        <span>Cargando...</span>
         }
         @else if(error){
-            <span span style="color: red">Error: {{error}}</span>
+        <span span style="color: red">Error: {{error}}</span>
         }
         @else if (producto_seleccionado){
-            <div class="prod-detail-card">
-                <h1>{{producto_seleccionado.titulo}}</h1>
-                <img src="{{producto_seleccionado.img}}" alt="producto_seleccionado.titulo">
-                <p>{{producto_seleccionado.descripcion}}</p>
+        <div class="card-wrapper">
+            <div class="card">
+                <!-- card left -->
+                <div class="product-imgs">
+                    <!-- <div class="img-display">
+                        <div class="img-showcase">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_hw-UnbdiHZaOQ8QiDSXWtX_JQ06lz4btuw&s"
+                                alt="shoe image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgI4DQN8qrPA_mVt2cwXAe0rYGqyRXFyRh2w&s"
+                                alt="shoe image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa2n1RACIyhFvE9tqeHZykwJ3ScRaDB879Og&s"
+                                alt="shoe image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuYazz540bieKkFQ7edQIHqhAo1qV3SrhGQ&s"
+                                alt="shoe image">
+                        </div>
+                    </div> -->
+                    <div class="img-select">
+                        <div class="img-item">
+                            <a href="#">
+                                <img src="{{producto_seleccionado.img}}"
+                                    alt="shoe image">
+                            </a>
+                        </div>
+                        <!-- <div class="img-item">
+                            <a href="#" data-id="2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgI4DQN8qrPA_mVt2cwXAe0rYGqyRXFyRh2w&s"
+                                    alt="shoe image">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" data-id="3">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa2n1RACIyhFvE9tqeHZykwJ3ScRaDB879Og&s"
+                                    alt="shoe image">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" data-id="4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuYazz540bieKkFQ7edQIHqhAo1qV3SrhGQ&s"
+                                    alt="shoe image">
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- card right -->
+                <div class="product-content">
+                    <h2 class="product-title">{{producto_seleccionado.titulo}}</h2>
+                    <a href="#" class="product-link">visit nike store</a>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7(21)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <p class="last-price">Old Price: <span>${{producto_seleccionado.precioAntes}}</span></p>
+                        <p class="new-price">New Price: <span>${{producto_seleccionado.precioFinal}} ({{producto_seleccionado.descuento}}%)</span></p>
+                    </div>
+
+                    <div class="product-detail">
+                        <h2>about this item: </h2>
+                        <p>{{producto_seleccionado.descripcion}}</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius.
+                            Dignissimos, labore suscipit. Unde.</p> -->
+                        <!-- <ul>
+                            <li>Color: <span>Black</span></li>
+                            <li>Available: <span>in stock</span></li>
+                            <li>Category: <span>Shoes</span></li>
+                            <li>Shipping Area: <span>All over the world</span></li>
+                            <li>Shipping Fee: <span>Free</span></li>
+                        </ul> -->
+                    </div>
+
+                    <div class="purchase-info">
+                        <input type="number" min="0" value="1">
+                        <button type="button" class="btn">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button type="button" class="btn">Compare</button>
+                    </div>
+
+                    <div class="social-links">
+                        <p>Share At: </p>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- </div> -->
         }
     </main>
 </body>
-
-
