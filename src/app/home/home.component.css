@@ -1,36 +1,42 @@
 .home {
+    /* display: flex; */
     min-height: 100dvh;
     min-width: 100dvw;
     background: linear-gradient(90deg, #003f5b, #2b4b7d, #5f5195, #98509d, #cc4c91, #f25375, #ff6f4e, #ff9913);
     margin: 0 auto;
     overflow-x: hidden;
+    /* position: relative; */
 }
 
-h1 {
+/* h1 {
     display: flexbox;
     text-align: center;
-}
+} */
 
 .carousel-container {
+    contain: content;
+    /* position: absolute; */
     display: flex;
     /* width: 900px;
     height: 350px; */
     height: auto;
     width: 100%;
-    margin: 0.5rem auto;
+    margin: 2.5rem auto;
     align-items: center;
     justify-content: center;
 }
 
 .carousel-item img{
     object-fit: contain;
-    width: 900px;
+    width: 1000px;
     height: 350px;
 }
 
 .products {
+    /* position: absolute; */
     display: flex;
-    height: 60%;
+    min-height: 100%;
     min-width: 100%;
     margin: 0.15rem auto;
+    contain: content;
 }
