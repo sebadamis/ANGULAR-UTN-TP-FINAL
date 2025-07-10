@@ -5,7 +5,9 @@ box-sizing: border-box;
 
 }
 
-body{
+.login-body{
+    min-width: 100dvw;
+    min-height: 100dvh;
     background-color: rgb(19, 172, 146);
     overflow: hidden;
 }
