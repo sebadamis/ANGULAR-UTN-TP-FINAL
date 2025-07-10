@@ -38,7 +38,7 @@
                     <div class="product-price">
                         <p class="last-price">Precio Lista: <span>${{producto_seleccionado.precioAntes}}</span></p>
                         <p class="new-price">Precio c/Descuento: 
-                            <span>${{producto_seleccionado.precioFinal}} - ({{producto_seleccionado.descuento}}%)</span>
+                            <span>${{producto_seleccionado.precioFinal}}  ({{producto_seleccionado.descuento}}%)</span>
                         </p>
                     </div>
 
@@ -50,11 +50,11 @@
 
                     <div class="purchase-info">
                         <div class="button_plus_minus">
-                            <button (click)="incrementar()">
+                            <button (click)="incrementar()" class="btn_plus_minus plus">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                             <input type="number" min="0" value="{{contador()}}">
-                            <button (click)="decrementar()">
+                            <button (click)="decrementar()" class="btn_plus_minus minus">
                                 <i class="fa-solid fa-minus"></i>
                             </button>
 
@@ -62,16 +62,6 @@
                                 Agregar al Carrito <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
-                        <!-- <input type="number" min="0" value="1"> -->
-                        <!-- <div class="shop-cart">
-                            <button type="button" class="btn">
-                                Agregar al Carrito <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div> -->
-                        <!-- <button type="button" class="btn">
-                            Agregar al Carrito <i class="fas fa-shopping-cart"></i>
-                        </button> -->
-                        <!-- <button type="button" class="btn">Compare</button> -->
                     </div>
 
                     <div class="social-links">
