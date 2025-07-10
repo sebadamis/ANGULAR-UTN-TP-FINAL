@@ -2,6 +2,8 @@
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <body class="detail-body">
     <main class="prod-detail-main">
@@ -23,7 +25,7 @@
                 <!-- card right -->
                 <div class="product-content">
                     <h2 class="product-title">{{producto_seleccionado.titulo}}</h2>
-                    <!-- <a href="#" class="product-link">visit nike store</a> -->
+                    <span class="product-link">{{producto_seleccionado.categoria}}</span>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -47,10 +49,28 @@
                     </div>
 
                     <div class="purchase-info">
-                        <input type="number" min="0" value="1">
-                        <button type="button" class="btn">
+                        <div class="button_plus_minus">
+                            <button (click)="incrementar()">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <input type="number" min="0" value="{{contador()}}">
+                            <button (click)="decrementar()">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <button type="button" class="btn">
+                                Agregar al Carrito <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <!-- <input type="number" min="0" value="1"> -->
+                        <!-- <div class="shop-cart">
+                            <button type="button" class="btn">
+                                Agregar al Carrito <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div> -->
+                        <!-- <button type="button" class="btn">
                             Agregar al Carrito <i class="fas fa-shopping-cart"></i>
-                        </button>
+                        </button> -->
                         <!-- <button type="button" class="btn">Compare</button> -->
                     </div>
 

@@ -10,7 +10,20 @@ body{
     line-height: 1.5;
 }
 .prod-detail-main {
-    background-color: green;
+    background-image: linear-gradient(
+    155deg,
+    hsl(301deg 48% 47%) 0%,
+    hsl(335deg 83% 59%) 6%,
+    hsl(3deg 100% 68%) 14%,
+    hsl(29deg 100% 62%) 26%,
+    hsl(51deg 77% 57%) 41%,
+    hsl(89deg 89% 70%) 55%,
+    hsl(160deg 100% 43%) 67%,
+    hsl(180deg 100% 36%) 77%,
+    hsl(198deg 100% 41%) 86%,
+    hsl(210deg 100% 39%) 93%,
+    hsl(228deg 73% 34%) 100%
+    );
     padding-bottom: 2rem;
 }
 .card-wrapper{
@@ -19,8 +32,24 @@ body{
     background-color: transparent;
 }
 .card {
-    background-color: #256eff;
+    display: flex;
+    /* background-color: #256eff; */
+    width: 90%;
+    height: auto;
+    contain: content;
+    border: 5px solid gray;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: #25252575;
 
+    .product-imgs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        contain: content;
+        margin: 0 auto;
+        
+    }
     .img-item {
         display: flex;
         align-items: center;
@@ -32,6 +61,7 @@ body{
         margin: 0.5rem;
         object-fit: contain;
         contain: content;
+        background-color: #256eff;
 
         img{
         width: 500px;
@@ -48,18 +78,24 @@ body{
 
 
 .product-content{
+    background-color: #256eff;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 2rem 1rem;
     float: left;
     contain: content;
     border: 5px solid gray;
     border-radius: 15px;
     margin: 0 auto;
+    margin: 1.1rem 0.5rem;
+    width: auto;
+    /* height: 90%; */
+    height: auto;
+    align-items: center;
+    /* justify-items: flex-start; */
 }
 .product-title{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
@@ -157,7 +193,7 @@ body{
     gap: 1rem;
 }
 .purchase-info input{
-    width: 60px;
+    width: 50px;
 }
 .purchase-info .btn{
     cursor: pointer;
@@ -167,6 +203,25 @@ body{
     background: #25ff37;
     color: black;
     margin-left: 0.25rem;
+}
+
+.purchase-info .button_plus_minus .shop-cart {
+    display: flex;
+    align-items: center;
+    /* justify-items: center; */
+    margin: 0 0.5rem;
+}
+
+.button_plus_minus {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 0.5rem;
+
+    button {
+        background-color: rgb(4, 23, 90);
+        color: white;
+    }
 }
 
 .purchase-info .btn:hover{

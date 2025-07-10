@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, ProductService } from '../services/product.service';
 
@@ -14,6 +14,17 @@ export class Detail {
   producto_seleccionado: Product | undefined = undefined
   loading : boolean = true
   error : string | null = null
+
+  contador = signal(0)
+
+  incrementar() {
+    this.contador.update(valor => valor + 1);
+  }
+
+  decrementar() {
+    this.contador.update(valor => valor - 1);
+  }
+
 
   constructor(private route: ActivatedRoute){
     
