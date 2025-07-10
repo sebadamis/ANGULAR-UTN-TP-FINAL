@@ -9,41 +9,54 @@
 body{
     line-height: 1.5;
 }
+.prod-detail-main {
+    background-color: green;
+    padding-bottom: 2rem;
+}
 .card-wrapper{
     max-width: 1100px;
     margin: 0 auto;
+    background-color: transparent;
 }
-img{
-    width: 100%;
-    display: block;
+.card {
+    background-color: #256eff;
+
+    .img-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+        margin: 0 auto;
+        border: 5px solid gray;
+        border-radius: 15px;
+        margin: 0.5rem;
+        object-fit: contain;
+        contain: content;
+
+        img{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        aspect-ratio: 1;
+        }
+    }
 }
-.img-display{
-    overflow: hidden;
-}
-.img-showcase{
-    display: flex;
-    width: 100%;
-    transition: all 0.5s ease;
-}
-.img-showcase img{
-    min-width: 100%;
-}
-.img-select{
-    display: flex;
-}
-.img-item{
-    margin: 0.3rem;
-}
-.img-item:nth-child(1),
-.img-item:nth-child(2),
-.img-item:nth-child(3){
-    margin-right: 0;
-}
-.img-item:hover{
-    opacity: 0.8;
-}
+
+
+
+
+
+
 .product-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 2rem 1rem;
+    float: left;
+    contain: content;
+    border: 5px solid gray;
+    border-radius: 15px;
+    margin: 0 auto;
 }
 .product-title{
     font-size: 3rem;
@@ -97,17 +110,21 @@ img{
     text-decoration: line-through;
 }
 .new-price span{
-    color: #256eff;
+    color: #54ff25;
 }
 .product-detail h2{
     text-transform: capitalize;
     color: #12263a;
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 .product-detail p{
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0.3rem;
     opacity: 0.8;
+    color: white;
 }
 .product-detail ul{
     margin: 1rem 0;
@@ -116,7 +133,6 @@ img{
 .product-detail ul li{
     margin: 0;
     list-style: none;
-    /* background: url(shoes_images/checked.png) left center no-repeat; */
     background-size: 18px;
     padding-left: 1.7rem;
     margin: 0.4rem 0;
@@ -131,13 +147,14 @@ img{
 }
 .purchase-info input,
 .purchase-info .btn{
+    display: inline-flex;
     border: 1.5px solid #ddd;
     border-radius: 25px;
     text-align: center;
     padding: 0.45rem 0.8rem;
     outline: 0;
     margin-right: 0.2rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
 }
 .purchase-info input{
     width: 60px;
@@ -147,11 +164,11 @@ img{
     color: #fff;
 }
 .purchase-info .btn:first-of-type{
-    background: #256eff;
+    background: #25ff37;
+    color: black;
+    margin-left: 0.25rem;
 }
-.purchase-info .btn:last-of-type{
-    background: #f64749;
-}
+
 .purchase-info .btn:hover{
     opacity: 0.9;
 }
@@ -166,6 +183,7 @@ img{
     width: 32px;
     height: 32px;
     color: #000;
+    background-color: antiquewhite;
     border: 1px solid #000;
     margin: 0 0.2rem;
     border-radius: 50%;

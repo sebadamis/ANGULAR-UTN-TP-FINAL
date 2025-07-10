@@ -55,8 +55,8 @@ body li {
     margin: 0;
     list-style-type: none;
 }
-.id_num {
-    display: none;
+.nombreProd:hover {
+    color: #003f5b;
 }
 
 .prod-list {
