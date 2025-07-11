@@ -124,3 +124,12 @@ form .button input:hover{
     font-weight: 800;
     width: 80%;
 }
+
+@media ( width < 580px){
+    .container form .user-details{
+        max-height: 500px;
+    }
+    .container{
+        margin: 1.3rem;
+    }
+}

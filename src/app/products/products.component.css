@@ -275,3 +275,15 @@ body li {
 .contenedorCards .card .wrapper .infoProd .actions .action.alCarrito svg.inCart {
     transform: scale(0);
 }
+
+@media ( width < 1390px) {
+    .prod-list{
+        padding-top: 25rem;
+    }
+}
+
+@media ( width < 1040px) {
+    .prod-list{
+        padding-top: 62rem;
+    }
+}
