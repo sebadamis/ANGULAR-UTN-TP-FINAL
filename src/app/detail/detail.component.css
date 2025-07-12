@@ -204,6 +204,8 @@ body{
 .purchase-info .btn{
     cursor: pointer;
     color: #fff;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -313,3 +315,25 @@ body{
         margin: 0;
     }
 }
+
+@media (width < 590px){
+    .card .img-item img{
+            height: 400px;
+            width: 400px;
+    }
+}
+
+@media (width < 480px){
+    .card .img-item img{
+            height: 300px;
+            width: 300px;
+    }
+}
+
+@media (width < 365px){
+    .card .img-item img{
+            height: 200px;
+            width: 200px;
+    }
+}
+

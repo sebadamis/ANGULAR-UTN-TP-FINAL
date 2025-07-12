@@ -283,8 +283,14 @@ body li {
     }
 }
 
-@media ( width < 1042px) {
+@media (width <1297px){
     .prod-list{
-        padding-top: 62rem;
+        padding-top: 39rem;
+    }
+}
+
+@media ( width < 1040px) {
+    .prod-list{
+        padding-top: 75rem;
     }
 }

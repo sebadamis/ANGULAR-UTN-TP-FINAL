@@ -30,3 +30,9 @@
     margin: 0.15rem auto;
     contain: content;
 }
+
+@media (width < 375px){
+    .carousel-container {
+        margin: 0 auto;
+    }
+}
