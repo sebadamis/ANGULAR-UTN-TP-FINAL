@@ -21,14 +21,17 @@
     object-fit: contain;
     width: 1000px;
     height: 350px;
+    max-height: 20%;
+    overflow-block: auto;
 }
 
 .products {
     display: flex;
-    min-height: 100%;
+    min-height: 80%;
     min-width: 100%;
     margin: 0.15rem auto;
     contain: content;
+    overflow: auto;
 }
 
 @media (width < 375px){

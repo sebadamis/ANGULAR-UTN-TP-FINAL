@@ -291,6 +291,14 @@ body li {
 
 @media ( width < 1040px) {
     .prod-list{
-        padding-top: 75rem;
+        padding-top: 160rem;
+        margin-top: 50rem;
+    }
+}
+
+@media ( width < 685px) {
+    .prod-list{
+        padding-top: 150rem;
+        margin-top: 50rem;
     }
 }
